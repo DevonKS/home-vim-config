@@ -9,6 +9,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-surround'
+Plug 'venantius/vim-cljfmt'
+Plug 'venantius/vim-eastwood'
+Plug 'vim-syntastic/syntastic'
 
 "Golang setup
 Plug 'fatih/vim-go'
@@ -58,6 +62,16 @@ let g:airline_skip_empty_sections = 1
 
 "Golang setup
 let g:go_disable_autoinstall = 0
+
+"Synastic set
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Highlight
 let g:go_highlight_functions = 1  
